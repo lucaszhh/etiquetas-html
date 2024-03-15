@@ -1,0 +1,39 @@
+---
+import Button from "./Button.astro"
+---
+
+
+<section>
+    <div>
+        <h1>ETIQUETAS HTML</h1>
+        <p>Sitio web desarrollado en el taller de WEB LAB para aprender el uso de etiquetas del lenguaje de programación HTML</p>
+        <Button>Conocer etiquetas</Button>
+    </div>
+    <img src="/logo3d.gif" alt="">
+</section>
+
+<style>
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40px;
+        padding: 40px;
+        gap: 200px;
+        border: 2px solid #c4c4c4;
+        border-radius: 10px;
+    }
+    h1{
+        font-size: 80px;
+    }
+    img{
+        width: 400px;
+    }
+    div{
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+</style>

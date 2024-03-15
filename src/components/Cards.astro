@@ -1,0 +1,58 @@
+---
+import Card from "../components/Card.astro";
+
+const tags = [
+    {
+        title: "h1",
+        code: "<h1>HOLA MUNDO</h1>",
+        description: "Etiqueta de Encabezado",
+        type: "Bloque",
+    },
+    {
+        title: "h2",
+        code: "<h2>HOLA MUNDO</h2>",
+        description: "Etiqueta de Encabezado",
+        type: "Bloque",
+    },
+    {
+        title: "h3",
+        code: "<h3>HOLA MUNDO</h3>",
+        description: "Etiqueta de Encabezado",
+        type: "Bloque",
+    },
+    {
+        title: "h4",
+        code: "<h4>HOLA MUNDO</h4>",
+        description: "Etiqueta de Encabezado",
+        type: "Bloque",
+    },
+];
+---
+
+<section class="cards">
+    {
+        tags.map((tag) => {
+            return (
+                <Card>
+                    <h2>
+                        {tag.title}
+                        <span>&rarr;</span>
+                    </h2>
+                    <small>{tag.type}</small>
+                    <p>{tag.description}</p>
+                    <h3>Usos</h3>
+                    <p>{tag.code}</p>
+                </Card>
+            );
+        })
+    }
+</section>
+
+<style>
+	.cards{
+		display: flex;
+        justify-content: center;
+		flex-wrap: wrap;
+		gap: 40px;
+	}
+</style>

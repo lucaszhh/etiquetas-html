@@ -1,0 +1,52 @@
+
+
+<article class="card">
+	<div class="tools">
+		<span class="red box"></span>
+		<span class="yellow box"></span>
+		<span class="green box"></span>
+	</div>
+	<div class="card__content">
+		<slot></slot>
+	</div>
+</article>
+
+<style>
+	.card {
+		padding: 20px;
+		background-color: #f8fbfe;
+		border-radius: 8px;
+		z-index: 1;
+		width: 70%;
+		min-width: 500px;
+		font-family: "Sometype Mono", monospace;
+	}
+
+	.tools {
+		display: flex;
+		align-items: center;
+		justify-content: end;
+		gap: 4px;
+	}
+
+	.box {
+		display: inline-block;
+		align-items: center;
+		width: 12px;
+		height: 12px;
+		padding: 1px;
+		border-radius: 50%;
+	}
+
+	.red {
+		background-color: #ff605c;
+	}
+
+	.yellow {
+		background-color: #ffbd44;
+	}
+
+	.green {
+		background-color: #00ca4e;
+	}
+</style>
