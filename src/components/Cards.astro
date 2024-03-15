@@ -1,10 +1,11 @@
 ---
 import Card from "../components/Card.astro";
+import Copy from "../components/Copy.astro";
 
 const tags = [
     {
-        title: "h1",
-        code: "<h1>HOLA MUNDO</h1>",
+        title: "<h1>",
+        code: "<h1>Heading level 1</h1>",
         description: "Etiqueta de Encabezado",
         type: "Bloque",
     },
@@ -38,10 +39,17 @@ const tags = [
                         {tag.title}
                         <span>&rarr;</span>
                     </h2>
-                    <small>{tag.type}</small>
-                    <p>{tag.description}</p>
-                    <h3>Usos</h3>
-                    <p>{tag.code}</p>
+                    <div>
+                        <small>Etiqueta de tipo: {tag.type}</small>
+                        <p>{tag.description}</p>
+                    </div>
+                    <div class="copy">
+                        <h3>Usos</h3>
+                        <Copy/>
+                    </div>
+                    <div class="code">
+                        <p>{tag.code}</p>
+                    </div>
                 </Card>
             );
         })
@@ -54,5 +62,24 @@ const tags = [
         justify-content: center;
 		flex-wrap: wrap;
 		gap: 40px;
+        margin: 40px 0;
 	}
+    h2{
+        font-weight: 900;
+        font-size: 40px;
+    }
+    h3{
+        font-size: 30px;
+    }
+    .copy{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .code{
+        background-color: var(--bg);
+        color: var(--font);
+        padding: 20px;
+        border-radius: 10px;
+    }
 </style>
